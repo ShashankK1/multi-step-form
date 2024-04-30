@@ -1,0 +1,50 @@
+.plan-card {
+    box-sizing: border-box;
+    font-family: "Medium";
+    height: 180px;
+    width: 150px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.plan-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+}
+
+.img {
+    max-width: 100%;
+}
+
+.month {
+    font-family: "Medium";
+}
+
+.year {
+    font-family: "Medium";
+}
+
+.free {
+    font-family: "Medium";
+}
+
+@media only screen and (max-width: 600px) {
+    .plan-card {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: center;
+        column-gap: 8px;
+        height: fit-content;
+    }
+
+    .free {
+        display: none;
+    }
+}

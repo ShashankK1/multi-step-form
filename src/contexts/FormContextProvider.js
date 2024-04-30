@@ -18,16 +18,14 @@ const InitialState = {
 
 const FormContextProvider = (props) => {
     const [formDetails, setFormDetails] = useState(InitialState);
-    const [currentStep, setCurrentStep] = useState(1);
+    const [currentStep, setCurrentStep] = useState(2);
 
-    const onStepOneChange = (name, value) => {
+    const onStepOneChange = (data) => {
         setFormDetails(prev => ({
             ...prev,
-            1: {
-                ...prev[1],
-                [name]: value
-            }
+            1: { ...data }
         }));
+        setCurrentStep(2);
     }
 
     const onStepTwoChange = (name, value) => {
@@ -38,6 +36,7 @@ const FormContextProvider = (props) => {
                 [name]: value
             }
         }));
+        setCurrentStep(3);
     }
 
     const onStepThreeChange = (action, data) => {
@@ -56,6 +55,7 @@ const FormContextProvider = (props) => {
                 }
             }));
         }
+        setCurrentStep(4);
     }
 
     return (

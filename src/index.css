@@ -22,3 +22,9 @@ body {
   font-family: "Bold";
   src: local("Ubuntu-Bold"), url("./fonts/Ubuntu-Bold.ttf") format("truetype");
 }
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: aliceblue;
+  }
+}

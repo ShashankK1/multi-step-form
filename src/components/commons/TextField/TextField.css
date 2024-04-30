@@ -1,0 +1,35 @@
+.input-group {
+    margin-bottom: 14px;
+    font-family: "Medium";
+}
+
+.input-group label {
+    font-size: small;
+    font-weight: bold;
+    color: rgb(93, 93, 223);
+}
+
+.input-group input {
+    font-size: 14px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.input-group .error-text {
+    font-family: "Medium";
+    font-size: small;
+    color: red;
+    margin-right: 6%;
+}
+
+.top-text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+input:focus {
+    border: 1px solid rgb(177, 57, 177);
+    outline: 1px solid rgb(177, 57, 177);
+}

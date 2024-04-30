@@ -1,0 +1,11 @@
+.personal-info {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 32px;
+}
