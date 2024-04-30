@@ -1,6 +1,7 @@
 import React from 'react';
 import './Navbar.css';
 import NavbarItems from '../NavbarItems/NavbarItems';
+import { useForm } from '../../contexts/FormContextProvider';
 
 const NavbarSteps = [
     {
@@ -27,13 +28,14 @@ const NavbarSteps = [
 ]
 
 const Navbar = () => {
+    const { currentStep } = useForm();
     return (
         <div className='navbar'>
             <div className="container">
                 <div className='steps'>
                     {
                         NavbarSteps.map(item => {
-                            return <NavbarItems key={item.id} {...item} />
+                            return <NavbarItems selected={currentStep === item.id} key={item.id} {...item} />
                         })
                     }
                 </div>

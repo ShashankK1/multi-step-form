@@ -1,10 +1,13 @@
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
+import FormContextProvider from './contexts/FormContextProvider';
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      <FormContextProvider>
+        <Navbar />
+      </FormContextProvider>
     </div>
   );
 }
