@@ -8,8 +8,11 @@ const InitialState = {
         phone: ""
     },
     2: {
-        type: null,
-        interval: "MONTHLY"
+        type: "Arcade",
+        monthPrice: 9,
+        yearPrice: 105,
+        url: "icon-arcade.svg",
+        interval: "YEARLY"
     },
     3: {
         addOns: []
@@ -18,23 +21,20 @@ const InitialState = {
 
 const FormContextProvider = (props) => {
     const [formDetails, setFormDetails] = useState(InitialState);
-    const [currentStep, setCurrentStep] = useState(2);
+    const [currentStep, setCurrentStep] = useState(3);
 
     const onStepOneChange = (data) => {
         setFormDetails(prev => ({
             ...prev,
-            1: { ...data }
+            1: { ...prev[1], ...data }
         }));
         setCurrentStep(2);
     }
 
-    const onStepTwoChange = (name, value) => {
+    const onStepTwoChange = (data) => {
         setFormDetails(prev => ({
             ...prev,
-            2: {
-                ...prev[2],
-                [name]: value
-            }
+            2: { ...data }
         }));
         setCurrentStep(3);
     }
@@ -57,9 +57,8 @@ const FormContextProvider = (props) => {
         }
         setCurrentStep(4);
     }
-
     return (
-        <FormContext.Provider value={{ formDetails, currentStep, onStepOneChange, onStepTwoChange, onStepThreeChange }}>
+        <FormContext.Provider value={{ formDetails, currentStep, onStepOneChange, onStepTwoChange, onStepThreeChange, setCurrentStep }}>
             {props.children}
         </FormContext.Provider>
     )

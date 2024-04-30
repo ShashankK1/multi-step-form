@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './SelectPlan.css';
 import PlanCards from '../PlanCards/PlanCards';
 import NextButton from '../commons/NextButton/NextButton';
 import BackButton from '../commons/BackButton/BackButton';
+import { useForm } from '../../contexts/FormContextProvider';
 
 const Plans = [
     {
@@ -26,26 +27,38 @@ const Plans = [
 ];
 
 const SelectPlan = () => {
+    const { formDetails, onStepTwoChange, setCurrentStep } = useForm();
+
+    const [form, setForm] = useState({ ...formDetails[2] });
+
+    const onCycleChange = (e) => {
+        setForm(prev => ({ ...prev, interval: (e.target.checked) ? "YEARLY" : "MONTHLY" }))
+    }
+
+    const handleNext = () => {
+        onStepTwoChange(form);
+    }
+
     return (
         <div className="select-plans">
             <div className="plans">
                 {
                     Plans.map((item, idx) => {
-                        return <PlanCards key={idx} cycle={"MONTHLY"} {...item} />
+                        return <PlanCards selected={item.type === form.type} cycle={form.interval} onClick={() => { setForm(prev => ({ ...prev, ...item })) }} key={idx} {...item} />
                     })
                 }
             </div>
             <div className="billing-cycle">
                 <span>Monthly</span>
                 <label className="switch">
-                    <input type="checkbox" />
+                    <input checked={form.interval === "YEARLY"} type="checkbox" onChange={onCycleChange} />
                     <span className="slider round"></span>
                 </label>
                 <span>Yearly</span>
             </div>
             <div className="action-btns">
-                <BackButton>Go Back</BackButton>
-                <NextButton>Next Step</NextButton>
+                <BackButton onClick={() => { setCurrentStep(1) }}>Go Back</BackButton>
+                <NextButton onClick={handleNext}>Next Step</NextButton>
             </div>
         </div>
     )

@@ -1,9 +1,9 @@
 import React from 'react'
 import './PlanCards.css';
 
-const PlanCards = ({ type, monthPrice, yearPrice, url, cycle = "MONTHLY" }) => {
+const PlanCards = ({ type, monthPrice, yearPrice, url, cycle = "MONTHLY", onClick, selected }) => {
     return (
-        <div className="plan-card">
+        <div className={"plan-card"} style={{ outline: (selected) ? '1px solid blue' : '', backgroundColor: (selected) ? 'rgba(0,0,0,0.1)' : '' }} onClick={() => { onClick({ type, monthPrice, yearPrice, url, cycle }) }}>
             <div>
                 <img alt='icon' className='img' src={url} />
             </div>
@@ -16,7 +16,7 @@ const PlanCards = ({ type, monthPrice, yearPrice, url, cycle = "MONTHLY" }) => {
                         </> :
                         <>
                             <span className='year'>${yearPrice}/yr</span>
-                            <spa className="free">2 months free</spa>
+                            <span className="free">2 months free</span>
                         </>
                 }
             </div>
