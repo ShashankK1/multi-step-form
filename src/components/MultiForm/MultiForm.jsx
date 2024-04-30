@@ -6,6 +6,7 @@ import PersonalInfo from '../PersonalInfo/PersonalInfo';
 import SelectPlan from '../SelectPlan/SelectPlan';
 import AddOns from '../AddOns/AddOns';
 import FinishingUp from '../FinishingUp/FinishingUp';
+import ThankYou from '../ThankYou/ThankYou';
 
 const MultiFormHeaders = {
     1: {
@@ -35,6 +36,7 @@ const MultiForm = () => {
             case 2: return <SelectPlan />;
             case 3: return <AddOns />;
             case 4: return <FinishingUp />
+            case 5: return <ThankYou />
             default: return <></>;
         }
     }

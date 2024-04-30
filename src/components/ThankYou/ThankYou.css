@@ -1,0 +1,20 @@
+.thank-you {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 24px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.head-text {
+    font-family: "Bold";
+    font-size: xx-large;
+}
+
+.content-text {
+    font-family: "Regular";
+    color: gray;
+    text-align: center;
+}
