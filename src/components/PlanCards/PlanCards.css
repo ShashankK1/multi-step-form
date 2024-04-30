@@ -13,6 +13,10 @@
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
+.plan-card:hover {
+    outline: 2px solid hsl(243, 100%, 62%);
+}
+
 .plan-info {
     display: flex;
     flex-direction: column;
@@ -25,14 +29,22 @@
 
 .month {
     font-family: "Medium";
+    color: hsl(231, 11%, 63%);
 }
 
 .year {
     font-family: "Medium";
+    color: hsl(231, 11%, 63%);
 }
 
 .free {
-    font-family: "Medium";
+    font-family: "Regular";
+    color: hsl(213, 96%, 18%);
+}
+
+.type {
+    font-family: "Bold";
+    color: hsl(213, 96%, 18%);
 }
 
 @media only screen and (max-width: 600px) {

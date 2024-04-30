@@ -8,7 +8,7 @@
     display: flex;
     padding: 24px;
     border-radius: 8px;
-    background-color: aliceblue;
+    background-color: hsl(217, 100%, 97%);
     flex-direction: column;
     row-gap: 12px;
 }
@@ -27,7 +27,7 @@
 
 .text-set {
     font-family: "Regular";
-    color: gray;
+    color: hsl(231, 11%, 63%);
 }
 
 .service-price {
@@ -37,4 +37,31 @@
 
 .non-colored {
     padding: 24px;
+}
+
+.type {
+    font-family: "Bold";
+    color: hsl(213, 96%, 18%);
+}
+
+.amount {
+    font-family: "Bold";
+    color: hsl(213, 96%, 18%);
+}
+
+.change {
+    font-family: "Regular";
+    color: hsl(231, 11%, 63%);
+}
+
+.text-final-set {
+
+    font-family: "Medium";
+    color: hsl(213, 96%, 18%);
+}
+
+.total {
+    color: hsl(243, 100%, 62%);
+    font-family: "Bold";
+    font-size: x-large;
 }

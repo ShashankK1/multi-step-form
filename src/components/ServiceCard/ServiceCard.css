@@ -7,6 +7,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: hsl(213, 96%, 18%);
+}
+
+.service-card:hover {
+    outline: 2px solid hsl(243, 100%, 62%);
 }
 
 .left {
@@ -29,4 +34,11 @@
 .text {
     font-family: "Medium";
     font-size: small;
+    color: hsl(231, 11%, 63%);
+}
+
+.interval-cost {
+    font-family: "Medium";
+    font-size: small;
+    color: hsl(243, 100%, 62%);
 }

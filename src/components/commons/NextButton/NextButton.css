@@ -1,7 +1,7 @@
 .next-button {
     cursor: pointer;
     border: none;
-    background-color: darkblue;
+    background-color: hsl(213, 96%, 18%);
     color: white;
     padding: 12px;
     font-family: "Medium";

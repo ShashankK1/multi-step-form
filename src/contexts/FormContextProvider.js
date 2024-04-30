@@ -45,7 +45,7 @@ const InitialState = {
 
 const FormContextProvider = (props) => {
     const [formDetails, setFormDetails] = useState(InitialState);
-    const [currentStep, setCurrentStep] = useState(5);
+    const [currentStep, setCurrentStep] = useState(1);
     console.log(formDetails)
     const onStepOneChange = (data) => {
         setFormDetails(prev => ({

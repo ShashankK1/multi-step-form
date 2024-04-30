@@ -2,9 +2,9 @@
     cursor: pointer;
     border: none;
     background-color: transparent;
-    color: gray;
+    color: hsl(231, 11%, 63%);
     padding: 12px;
-    font-family: "Medium";
+    font-family: "Bold";
     border-radius: 6px;
     width: fit-content;
 }

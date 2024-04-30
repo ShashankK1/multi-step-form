@@ -3,7 +3,7 @@ import './PlanCards.css';
 
 const PlanCards = ({ type, monthPrice, yearPrice, url, cycle = "MONTHLY", onClick, selected }) => {
     return (
-        <div className={"plan-card"} style={{ outline: (selected) ? '1px solid blue' : '', backgroundColor: (selected) ? 'rgba(0,0,0,0.1)' : '' }} onClick={() => { onClick({ type, monthPrice, yearPrice, url, cycle }) }}>
+        <div className={"plan-card"} style={{ outline: (selected) ? '2px solid hsl(243, 100%, 62%)' : '', backgroundColor: (selected) ? 'hsl(231, 100%, 99%)' : '' }} onClick={() => { onClick({ type, monthPrice, yearPrice, url, cycle }) }}>
             <div>
                 <img alt='icon' className='img' src={url} />
             </div>

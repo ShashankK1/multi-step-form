@@ -34,7 +34,7 @@ const FinishingUp = () => {
                         <span className="type">
                             {formDetails[2].type}{" (" + formDetails[2].interval + ")"}
                         </span>
-                        <span onClick={() => { setCurrentStep(2) }} className="change" style={{ textDecoration: 'underline', cursor: 'pointer' }}>Change</span>
+                        <span className="change" onClick={() => { setCurrentStep(2) }} style={{ textDecoration: 'underline', cursor: 'pointer' }}>Change</span>
                     </div>
                     <div className="amount">{(formDetails[2].interval === "YEARLY") ? `$${formDetails[2].yearPrice}/yr` : `$${formDetails[2].monthPrice}/mo`}</div>
                 </div>
@@ -43,7 +43,7 @@ const FinishingUp = () => {
                     formDetails[3].addOns.map((item, idx) => {
                         return item.checked ? <div className="service-price">
                             <span className="text-set">{item.service}</span>
-                            <span className="text-set">{(formDetails[2].interval === 'YEARLY') ? `$${item.yearCost}/yr` : `$${item.monthCost}/mo`}</span>
+                            <span className="text-final-set">{(formDetails[2].interval === 'YEARLY') ? `+$${item.yearCost}/yr` : `+$${item.monthCost}/mo`}</span>
                         </div> : <></>
                     })
                 }
@@ -51,14 +51,14 @@ const FinishingUp = () => {
             <div className="non-colored">
                 <div className="service-price">
                     <span className="text-set">{"Total (per year)"}</span>
-                    <span className="text-set">{total()}</span>
+                    <span className="total">{total()}</span>
                 </div>
             </div>
             <div className="action-btns">
                 <BackButton onClick={() => { setCurrentStep(3) }}>Go back</BackButton>
                 <button
                     onClick={() => { setCurrentStep(5) }}
-                    style={{ border: '1px solid purple', backgroundColor: 'purple', color: 'white', padding: '6px 16px', fontFamily: 'Medium', fontSize: 'medium', borderRadius: '8px' }}
+                    style={{ border: '1px solid hsl(243, 100%, 62%)', backgroundColor: 'hsl(243, 100%, 62%)', color: 'white', padding: '6px 16px', fontFamily: 'Medium', fontSize: 'medium', borderRadius: '8px' }}
                 >Confirm</button>
             </div>
         </div>

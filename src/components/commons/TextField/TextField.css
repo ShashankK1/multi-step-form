@@ -6,20 +6,20 @@
 .input-group label {
     font-size: small;
     font-weight: bold;
-    color: rgb(93, 93, 223);
+    color: hsl(213, 96%, 18%);
 }
 
 .input-group input {
     font-size: 14px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid hsl(229, 24%, 87%);
     border-radius: 6px;
 }
 
 .input-group .error-text {
     font-family: "Medium";
     font-size: small;
-    color: red;
+    color: hsl(354, 84%, 57%);
     margin-right: 6%;
 }
 

@@ -49,12 +49,12 @@ const SelectPlan = () => {
                 }
             </div>
             <div className="billing-cycle">
-                <span>Monthly</span>
+                <span style={{ color: (form.interval === "MONTHLY") ? '' : 'hsl(231, 11%, 63%)' }}>Monthly</span>
                 <label className="switch">
                     <input checked={form.interval === "YEARLY"} type="checkbox" onChange={onCycleChange} />
                     <span className="slider round"></span>
                 </label>
-                <span>Yearly</span>
+                <span style={{ color: (form.interval === "YEARLY") ? '' : 'hsl(231, 11%, 63%)' }}>Yearly</span>
             </div>
             <div className="action-btns">
                 <BackButton onClick={() => { setCurrentStep(1) }}>Go Back</BackButton>

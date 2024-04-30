@@ -29,14 +29,9 @@
 }
 
 .circle {
-    color: blue;
-    background-color: lightblue;
-    border: 1px solid lightblue;
-}
-
-.step-no:hover {
-    background-color: aquamarine;
-    color: blue;
+    color: hsl(213, 96%, 18%);
+    background-color: hsl(206, 94%, 87%);
+    border: 1px solid hsl(206, 94%, 87%);
 }
 
 @media only screen and (max-width: 600px) {

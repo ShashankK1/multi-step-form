@@ -11,10 +11,11 @@
 .head-text {
     font-family: "Bold";
     font-size: xx-large;
+    color: hsl(213, 96%, 18%);
 }
 
 .content-text {
     font-family: "Regular";
-    color: gray;
+    color: hsl(231, 11%, 63%);
     text-align: center;
 }
