@@ -5,7 +5,7 @@ const PlanCards = ({ type, monthPrice, yearPrice, url, cycle = "MONTHLY" }) => {
     return (
         <div className="plan-card">
             <div>
-                <img className='img' src={url} />
+                <img alt='icon' className='img' src={url} />
             </div>
             <div className="plan-info">
                 <span className='type'>{type}</span>

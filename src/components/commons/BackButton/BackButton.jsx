@@ -6,4 +6,4 @@ const BackButton = ({ children, ...rest }) => {
     )
 }
 
-export default BackButton
+export default BackButton;

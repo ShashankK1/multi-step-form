@@ -1,6 +1,8 @@
 import React from 'react'
 import './SelectPlan.css';
 import PlanCards from '../PlanCards/PlanCards';
+import NextButton from '../commons/NextButton/NextButton';
+import BackButton from '../commons/BackButton/BackButton';
 
 const Plans = [
     {
@@ -33,7 +35,18 @@ const SelectPlan = () => {
                     })
                 }
             </div>
-            <div className="billing-cycle"></div>
+            <div className="billing-cycle">
+                <span>Monthly</span>
+                <label className="switch">
+                    <input type="checkbox" />
+                    <span className="slider round"></span>
+                </label>
+                <span>Yearly</span>
+            </div>
+            <div className="action-btns">
+                <BackButton>Go Back</BackButton>
+                <NextButton>Next Step</NextButton>
+            </div>
         </div>
     )
 }
