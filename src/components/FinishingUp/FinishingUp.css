@@ -1,0 +1,40 @@
+.finishing-up {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+
+.colored-set {
+    display: flex;
+    padding: 24px;
+    border-radius: 8px;
+    background-color: aliceblue;
+    flex-direction: column;
+    row-gap: 12px;
+}
+
+.info-set {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.container-set {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+}
+
+.text-set {
+    font-family: "Regular";
+    color: gray;
+}
+
+.service-price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.non-colored {
+    padding: 24px;
+}

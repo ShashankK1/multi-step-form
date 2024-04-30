@@ -1,6 +1,30 @@
 import React, { useContext, useState } from 'react'
 import FormContext from './FormContext'
 
+const AllAddOns = [
+    {
+        checked: false,
+        service: "Online service",
+        text: "Access to multiplayer games",
+        monthCost: 1,
+        yearCost: 11
+    },
+    {
+        checked: false,
+        service: "Larger storage",
+        text: "Extra 1TB of cloud save",
+        monthCost: 2,
+        yearCost: 20
+    },
+    {
+        checked: false,
+        service: "Customizable profile",
+        text: "Custom theme on your profile",
+        monthCost: 2,
+        yearCost: 18
+    }
+]
+
 const InitialState = {
     1: {
         name: "",
@@ -15,14 +39,14 @@ const InitialState = {
         interval: "YEARLY"
     },
     3: {
-        addOns: []
+        addOns: AllAddOns
     }
 }
 
 const FormContextProvider = (props) => {
     const [formDetails, setFormDetails] = useState(InitialState);
-    const [currentStep, setCurrentStep] = useState(3);
-
+    const [currentStep, setCurrentStep] = useState(1);
+    console.log(formDetails)
     const onStepOneChange = (data) => {
         setFormDetails(prev => ({
             ...prev,
@@ -39,24 +63,14 @@ const FormContextProvider = (props) => {
         setCurrentStep(3);
     }
 
-    const onStepThreeChange = (action, data) => {
-        if (action === "ADD") {
-            setFormDetails(prev => ({
-                ...prev,
-                3: {
-                    addOns: prev[3].addOns.push(data)
-                }
-            }));
-        } else {
-            setFormDetails(prev => ({
-                ...prev,
-                3: {
-                    addOns: prev[3].addOns.filter(item => item.id !== data.id)
-                }
-            }));
-        }
+    const onStepThreeChange = (data) => {
+        setFormDetails(prev => ({
+            ...prev,
+            3: { addOns: data }
+        }));
         setCurrentStep(4);
     }
+
     return (
         <FormContext.Provider value={{ formDetails, currentStep, onStepOneChange, onStepTwoChange, onStepThreeChange, setCurrentStep }}>
             {props.children}

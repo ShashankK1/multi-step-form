@@ -4,6 +4,8 @@ import MultiFormHeader from '../MultiFormHeaders/MultiFormHeader';
 import { useForm } from '../../contexts/FormContextProvider';
 import PersonalInfo from '../PersonalInfo/PersonalInfo';
 import SelectPlan from '../SelectPlan/SelectPlan';
+import AddOns from '../AddOns/AddOns';
+import FinishingUp from '../FinishingUp/FinishingUp';
 
 const MultiFormHeaders = {
     1: {
@@ -30,7 +32,10 @@ const MultiForm = () => {
     const ComponentToShow = () => {
         switch (currentStep) {
             case 1: return <PersonalInfo />;
-            case 2: return <SelectPlan />
+            case 2: return <SelectPlan />;
+            case 3: return <AddOns />;
+            case 4: return <FinishingUp />
+            default: return <></>;
         }
     }
 
